@@ -1,0 +1,45 @@
+{
+  "name": "@goat-sdk/plugin-aave",
+  "version": "0.1.0",
+  "description": "Aave plugin for the GOAT framework. Enables agents to interact with Aave's DeFi protocol.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": ["dist/**/*", "README.md", "package.json"],
+  "scripts": {
+    "build": "tsup", 
+    "clean": "rm -rf dist", 
+    "start": "tsup --watch", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["aave", "goat", "plugin", "defi", "web3", "typescript"],
+  "author": "Lumi <lumi@defi.sucks>",
+  "license": "MIT",
+  "homepage": "https://ohmygoat.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goat-sdk/goat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goat-sdk/goat/issues"
+  },
+  "dependencies": {
+    "@goat-sdk/core": "workspace:*",
+    "@goat-sdk/wallet-evm": "workspace:*",
+    "ethers": "^5.7.2" 
+  },
+  "peerDependencies": {
+    "@goat-sdk/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "zod": "^3.24.1"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowAny": ["@goat-sdk/core"]
+    }
+  }
+}
